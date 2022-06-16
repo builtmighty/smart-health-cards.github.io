@@ -11,12 +11,12 @@ jobs:
         uses: enflo/curl-action@v1.2
         with:
           # curl arguments
-          curl: -O https://raw.githubusercontent.com/the-commons-project/vci-directory/main/vci-issuers.json
+          curl: -o _data/vci-issuers.json https://raw.githubusercontent.com/the-commons-project/vci-directory/main/vci-issuers.json
       - name: Commit files
         run: |
          git config --global user.email "kreig.e.durham@gmail.com"
          git config --global user.name "Kreig Durham"
-         git add ./_data
+         git add ./_data/*
          git commit -m "Fetch JSON file from VCI directory"
    
 #   text-curl-action:
