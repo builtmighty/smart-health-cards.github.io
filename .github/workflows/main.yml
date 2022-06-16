@@ -14,26 +14,11 @@ jobs:
           curl: -o _data/vci-issuers.json https://raw.githubusercontent.com/the-commons-project/vci-directory/main/vci-issuers.json
       - name: Commit files
         run: |
-         git config --global user.email "kreig.e.durham@gmail.com"
-         git config --global user.name "Kreig Durham"
+         git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+         git config --local user.name "github-actions[bot]"
          git add ./_data/*
          git commit -m "Fetch JSON file from VCI directory"
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
          branch: ${{ github.ref }}
-   
-#   text-curl-action:
-#     name: "Test Curl"
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: "Fetch file"
-#       # You may pin to the exact commit or the version.
-#       # uses: indiesdev/curl@5f733a4ab67799ec174b9b9b3f8d78100ae084e8
-#         uses: indiesdev/curl@v1.1
-#         with:
-#           # The target url
-#           url: https://raw.githubusercontent.com/the-commons-project/vci-directory/main/vci-issuers.json
-#           # The request method, basically one of GET, POST, PUT, PATCH
-#           # method: # optional, default is GET
-#           # custom config
