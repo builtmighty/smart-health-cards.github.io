@@ -20,6 +20,8 @@ jobs:
          git commit -m "Fetch JSON file from VCI directory"
       - name: Push changes
         uses: ad-m/github-push-action@master
+        with:
+         branch: ${{ github.ref }}
    
 #   text-curl-action:
 #     name: "Test Curl"
