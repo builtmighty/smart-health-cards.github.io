@@ -1,4 +1,4 @@
-name: Fetch File
+name: Fetch json files
 on: [push]
 jobs:
  cURL:
