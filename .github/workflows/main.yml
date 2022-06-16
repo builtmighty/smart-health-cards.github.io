@@ -12,7 +12,11 @@ jobs:
         with:
           # curl arguments
           curl: -O https://raw.githubusercontent.com/the-commons-project/vci-directory/main/vci-issuers.json
-          TARGET_FOLDER: _data
+      - name: Commit files
+        run: |
+         git add ./_data
+         git commit -m "Fetch JSON file from VCI directory"
+   
 #   text-curl-action:
 #     name: "Test Curl"
 #     runs-on: ubuntu-latest
