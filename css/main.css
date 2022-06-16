@@ -465,7 +465,190 @@ ul#FAQTOC
 }
 /* /Community Page */
 
-#backToTop 
+/* Find an Issuer Page */
+.shc-issuer {
+    white-space: nowrap;
+}
+
+.shc-issuer::after {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 10px;
+    background: linear-gradient(180deg, rgba(255, 193, 58, 0) 0%, #FFC13A 100%);
+    border: 1px solid #205F5F;
+    border-radius: 2px;
+}
+/* /Find an Issuer Page */
+
+/* How They Work Page */
+.lifecycle-graphic__column {
+    position: relative;
+    border: 0 dashed #0A8E97;
+}
+
+.lifecycle-graphic__column:nth-of-type(1) {
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+}
+
+.lifecycle-graphic__column:nth-of-type(2) {
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+}
+
+.lifecycle-graphic__column:nth-of-type(3) {
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+}
+
+.lifecycle-graphic__column:nth-of-type(4) {
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+}
+
+.lifecycle-graphic__column:nth-of-type(1)::after,
+.lifecycle-graphic__column:nth-of-type(2)::after,
+.lifecycle-graphic__column:nth-of-type(3)::after {
+    content: url('/Assets/Images/chevron.png');
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 29px;
+    z-index: 2;
+}
+
+.lifecycle-graphic__column:nth-of-type(1)::after,
+.lifecycle-graphic__column:nth-of-type(2)::after,
+.lifecycle-graphic__column:nth-of-type(3)::after {
+    bottom: -15px;
+    left: calc(50% - 15px);
+    right: calc(50% + 15px);
+    transform: rotate(90deg);
+}
+
+.lifecycle-graphic__column:nth-of-type(2)::after {
+    transform: rotate(-90deg);
+}
+
+.lifecycle-graphic__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+}
+
+@media (min-width: 992px) {
+    .lifecycle-graphic {
+        margin-top: 6rem;
+    }
+
+    .lifecycle-graphic__column:nth-of-type(1) {
+        border-top-width: 2px;
+        border-bottom-width: 0;
+    }
+
+    .lifecycle-graphic__column:nth-of-type(2) {
+        border-right-width: 2px;
+        border-left-width: 0;
+    }
+
+    .lifecycle-graphic__column:nth-of-type(3) {
+        border-top-width: 2px;
+        border-bottom-width: 0;
+    }
+
+    .lifecycle-graphic__column:nth-of-type(4) {
+        border-right-width: 2px;
+        border-left-width: 0;
+    }
+
+    .lifecycle-graphic__column:nth-of-type(1)::after,
+    .lifecycle-graphic__column:nth-of-type(3)::after {
+        top: 50%;
+        bottom: unset;
+        left: unset;
+        right: -15px;
+        transform: unset;
+    }
+
+    .lifecycle-graphic__heading {
+        position: absolute;
+        top: -6rem;
+        width: 100%;
+    }
+
+    .lifecycle-graphic__heading::before {
+        content: '';
+        position: absolute;
+        top: calc(175% - 3px);
+        left: 50%;
+        right: 50%;
+        display: block;
+        height: 3px;
+        width: 3px;
+        background: #CDCDCD;
+        border-radius: 100%;
+    }
+
+    .lifecycle-graphic__heading::after {
+        content: '';
+        position: absolute;
+        top: 175%;
+        left: calc(50% + 1px);
+        right: calc(50% - 1px);
+        display: block;
+        height: 50px;
+        width: 0;
+        border-left: 1px solid #CDCDCD;
+    }
+}
+
+#verificationGraphic img {
+    height: 200px;
+    width: auto;
+}
+/* /How They Work Page */
+
+/* Location Page */
+span[class$="arrow"] {
+    white-space: nowrap;
+}
+
+span[class$="arrow"]::before {
+    content: url('/Assets/Images/chevron-rounded.svg');
+    display: inline-block;
+    height: 16px;
+    width: 9px;
+    vertical-align: middle;
+}
+
+span.left-arrow {
+    margin-right: 5px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(2px);
+}
+
+span.right-arrow {
+    margin-left: 5px;
+}
+
+span.right-arrow::before {
+    transform: rotate(180deg);
+}
+/* /Location Page */
+
+/* Support Page */
+.support-logo {
+    max-width: 200px;
+    height: auto;
+}
+/* /Support Page */
+
+#backToTop
 {
     position: fixed;
     bottom: 30px;
@@ -476,4 +659,48 @@ ul#FAQTOC
 
 .img-small {
     max-width: 175px;
+}
+
+.link-no-underline,
+a.link-no-underline {
+    text-decoration: none;
+}
+
+a.link-no-underline:hover {
+    text-decoration: underline;
+}
+
+.color-teal {
+    color: #0A8E97;
+}
+
+.color-yellow {
+    color: #FFC749;
+}
+
+.grid-cols {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    column-gap: 2.3rem;
+}
+
+.grid-cols > * {
+    flex: 1 1 calc(50% - 1.15rem);
+}
+
+@media (min-width: 768px) {
+    .grid-cols {
+        display: block;
+        columns: 3;
+        column-gap: 2rem;
+    }
+
+    .grid-cols > * {
+        /* flex: 1 1 calc(100% / 3); */
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        /* max-width: calc(100% / 3 - 1rem) */
+    }
 }

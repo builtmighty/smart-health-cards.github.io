@@ -213,7 +213,7 @@ nav: issuers
 
           {% comment %} Create a variable of the sorted list from the JSON file {% endcomment %}
           {% assign issuers = '' | split: '' %}
-          {% assign issuers_grouped = site.data.vci-issuers | group_by: 'name' | sort_natural: 'name' %}
+          {% assign issuers_grouped = site.data.vci-issuers.participating_issuers | group_by: 'name' | sort_natural: 'name' %}
           {% for issuer_entry in issuers_grouped %}
               {% assign best_entry_for_issuer = issuer_entry.items | sort: "website" | last %}
               {% assign issuers = issuers | push: best_entry_for_issuer %}

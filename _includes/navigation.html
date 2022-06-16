@@ -12,6 +12,16 @@
       <div class="collapse navbar-collapse" id="SMARTnavbar">
         <ul class="navbar-nav mr-auto">
 
+          {% if page.nav == "find-my-issuer" %}
+            <li class="nav-item active">
+              <a class="nav-link active" href="/en/find-my-issuer.html">Find My Issuer <span class="sr-only">(current)</span></a>
+            </li>
+          {% else %}
+            <li class="nav-item">
+              <a class="nav-link" href="/en/find-my-issuer.html">Find My Issuer</span></a>
+            </li>
+          {% endif %}
+
           {% if page.nav == "faq" %}
             <li class="nav-item active">
               <a class="nav-link active" href="faq.html">FAQ <span class="sr-only">(current)</span></a>
@@ -22,13 +32,23 @@
             </li>
           {% endif %}
 
-          {% if page.nav == "issuers" %}
+          {% if page.nav == "support" %}
             <li class="nav-item active">
-              <a class="nav-link active" href="/en/issuers.html">Issuers <span class="sr-only">(current)</span></a>
+              <a class="nav-link active" href="/en/support.html">Support <span class="sr-only">(current)</span></a>
             </li>
           {% else %}
             <li class="nav-item">
-              <a class="nav-link" href="/en/issuers.html">Issuers</span></a>
+              <a class="nav-link" href="/en/support.html">Support</span></a>
+            </li>
+          {% endif %}
+
+          {% if page.nav == "how-they-work" %}
+            <li class="nav-item active">
+              <a class="nav-link active" href="/en/how-they-work.html">How They Work <span class="sr-only">(current)</span></a>
+            </li>
+          {% else %}
+            <li class="nav-item">
+              <a class="nav-link" href="/en/how-they-work.html">How They Work</span></a>
             </li>
           {% endif %}
 

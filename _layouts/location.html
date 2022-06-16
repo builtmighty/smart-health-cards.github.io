@@ -1,0 +1,290 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="/Assets/Images/favicon.ico">
+
+  <title>{{ page.title }}</title>
+  <script src="../redirects.js"></script>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/main.css" rel="stylesheet">
+  <link href="../css/nav.css" rel="stylesheet">
+  <link href="../css/footer.css" rel="stylesheet">
+</head>
+
+<body>
+  {% include navigation.html %}
+
+  {% assign issuers = site.data.vci-issuers.participating_issuers %}
+  {% assign metadata = site.data.vci-issuers-metadata.issuer_metadata %}
+
+  {% comment %} Convert the location .md file's location array to a string to be compatible with how the metadata json handles the locations subarrays. Also isolate the country code and build a searchable string from it. {% endcomment %}
+  {% assign location_string = page.location[0] | join %}
+  {% assign country_string = '{"country"=>"' | append: page.location[0].country | append: '"}' %}
+
+  <!-- State Links -->
+  <section class="subSection py-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-12 text-left">
+
+          <!-- Back link -->
+          <a class="link-no-underline link-arrow font-weight-bold" href="find-my-issuer.html"><span class="left-arrow"></span>Find my issuer</a>
+
+        </div>
+      </div> <!-- / .row -->
+
+      <div class="row my-3">
+        <div class="col-12 col-lg-12 text-left">
+
+          <!-- Heading -->
+          <h1 class="h2 color-teal font-weight-normal">
+            {{ page.label }}
+          </h1>
+
+        </div>
+      </div> <!-- / .row -->
+
+      {% comment %} If the location is a SMART Health Card issuer, return their deeplink. Otherwise, return the text referring them to the pharmacies and healthcare providers {% endcomment %}
+      {% if page.smart_issuer %}
+
+      {% comment %} Assign the vaccine portal deeplink from the metadata if it exists, otherwise look in the issuers file {% endcomment %}
+      {% assign deeplinks = "" | split: "" %}
+      {% assign issuer_name = issuers | where: "name", page.label | last %}
+      {% for issuer in metadata %}
+        {% if issuer.label == page.label %}
+          {% if issuer.website %}
+            {% assign deeplink = issuer.website %}
+          {% else %}
+            {% assign deeplink_result = issuers | where: "iss", issuer.canonical_iss | last %}
+            {% assign deeplinks = deeplink_result | push: deeplink_result | sort_natural: "name" %}
+          {% endif %}
+        {% elsif issuer_name.name == page.label %}
+          {% assign deeplink = issuer_name.website %}
+        {% endif %}
+      {% endfor %}
+
+      {% unless deeplink %}
+        {% assign deeplink = deeplinks[0].website %}
+      {% endunless %}
+
+      <div class="row">
+        <div class="col-12">
+          <div class="row">
+            <div class="col-12">
+              <h2 class="font-weight-normal">
+                {{ page.label }} is a SMART Health Card issuer.
+              </h2>
+
+              <div class="row pt-4">
+                <div class="col-12 col-md-6">
+                  <div class="card shadow-sm mb-3">
+                    <div class="card-body py-4">
+                      <p class="card-text h5 mb-3">
+                        To get your SMART Health Card, visit {{ page.label }}'s vaccination portal.
+                      </p>
+
+                      <a class="card-link link-no-underline link-arrow font-weight-bold" href="{{ deeplink }}" target="_blank">{{ page.label }} Vaccine Portal<span class="right-arrow"></span></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div> <!-- / .row -->
+        </div>
+      </div> <!-- / .row -->
+
+      {% else %}
+
+      <div class="row">
+        <div class="col-12">
+          <div class="row">
+            <div class="col-12">
+              <p class="font-weight-bold">
+                {{ page.label }} does not issue SMART Health Cards directly, but you might be able to get a SMART Health Card from the pharmacy or healthcare organization where you got your vaccination.
+              </p>
+            </div>
+
+          </div> <!-- / .row -->
+        </div>
+      </div> <!-- / .row -->
+
+      {% endif %}
+
+      <div class="row pt-3 pb-3">
+        <div class="col-12">
+          <hr class="hr-yellow">
+        </div>
+      </div>
+
+    </div> <!-- / .container -->
+  </section>
+  <!-- /State Links -->
+
+  {% comment %} Create a variable to hold the sorted metadata for pharmacies and build an array from the issuers list from where the canonical_iss values match {% endcomment %}
+  {% assign pharmacy_issuers = "" | split: "" %}
+  {% assign pharmacies = metadata | where: "issuer_type", "organizational.pharmacy" | where: "website", string %}
+  {% for issuer in pharmacies %}
+    {% assign issuer_string = issuer.locations | join %}
+    {% if issuer_string contains country_string or issuer_string contains location_string %}
+      {% assign pharmacy_issuer = issuers | where: "iss", issuer.canonical_iss | last %}
+      {% assign pharmacy_issuers = pharmacy_issuers | push: pharmacy_issuer | sort_natural: "name" %}
+    {% endif %}
+  {% endfor %}
+
+  {% unless pharmacy_issuers == empty %}
+  <!-- Pharmacy Links -->
+  <section class="subSection pb-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="row">
+            <div class="col-12 pb-4">
+              <h2 class="font-weight-normal">
+                Pharmacies issuing SMART Health Cards in {{ page.label }}
+              </h2>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12">
+              <!-- Text -->
+              <p class="text-md-start mb-0">
+                There also are pharmacies issuing SMART Health Cards in {{ page.label }}. You might also be able to get your SMART Health Card if you were vaccinated at one or more of these pharmacies:
+              </p>
+            </div>
+          </div> <!-- / .row -->
+
+          <div class="row pt-4">
+            <div class="grid-cols col-12 issuers-pharmacies">
+
+            {% for pharmacy in pharmacy_issuers %}
+              {% if pharmacy.name and pharmacy.website %}
+                <p><a class="font-weight-bold link-no-underline link-arrow" href="{{ pharmacy.website }}" target="_blank">{{ pharmacy.name }}<span class="right-arrow"></span></a></p>
+              {% endif %}
+            {% endfor %}
+
+            </div>
+          </div>
+
+        </div>
+      </div> <!-- / .row -->
+
+      <div class="row pt-3 pb-3">
+        <div class="col-12">
+          <hr class="hr-yellow">
+        </div>
+      </div>
+    </div> <!-- / .container -->
+  </section>
+  <!-- /Pharmacy Links -->
+  {% endunless %}
+
+  {% comment %} Create a variable to hold the sorted metadata for healthcare providers and build an array from the issuers list from where the canonical_iss values match {% endcomment %}
+  {% assign hc_issuers = "" | split: "" %}
+  {% assign hc_providers = metadata | where: "issuer_type", "organizational.health_system" | where: "locations", location_string | where: "website", string %}
+  {% for issuer in hc_providers %}
+    {% assign issuer_string = issuer.locations | join %}
+    {% if issuer_string contains country_string or issuer_string contains location_string %}
+      {% assign hc_issuer = issuers | where: "iss", issuer.canonical_iss | last %}
+      {% assign hc_issuers = hc_issuers | push: hc_issuer | sort_natural: "name" %}
+      {% endif %}
+  {% endfor %}
+
+  {% unless hc_issuers == empty %}
+  <!-- Healthcare Provider Links -->
+  <section class="subSection pb-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="row">
+            <div class="col-12 pb-4">
+              <h2 class="font-weight-normal">
+                Healthcare providers issuing SMART Health Cards in {{ page.label }}
+              </h2>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12">
+              <!-- Text -->
+              <p class="text-md-start mb-0">
+                Additionally, these providers are issuing SMART Health Cards via their patient portals:
+              </p>
+            </div>
+          </div> <!-- / .row -->
+
+          <div class="row pt-4">
+            <div class="grid-cols col-12 issuers-healthcare">
+
+            {% for hc_issuer in hc_issuers %}
+              {% if hc_issuer.name == hc_name %}
+                {% continue %}
+              {% elsif hc_issuer.name and hc_issuer.website %}
+                <p>
+                  <a class="font-weight-bold link-no-underline link-arrow" href="{{ hc_issuer.website }}" target="_blank">{{ hc_issuer.name }}<span class="right-arrow"></span></a>
+                </p>
+              {% endif %}
+              {% assign hc_name = hc_issuer.name %}
+            {% endfor %}
+
+            </div>
+          </div>
+
+        </div>
+      </div> <!-- / .row -->
+
+    </div> <!-- / .container -->
+  </section>
+  <!-- /Healthcare Provider Links -->
+
+  <section class="bg-lightgrey subSection pt-4 pt-lg-5 pb-lg-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-7 offset-lg-1 text-left pb-4">
+          <div class="row">
+            <div class="col-12 text-left">
+
+              <!-- Heading -->
+              <h2>
+                Need more help?
+              </h2>
+            </div>
+          </div> <!-- / .row -->
+
+          <div class="row pt-2 pt-lg-3">
+            <div class="col-12 text-left">
+              <!-- Text -->
+              <p class="mb-md-9">
+                See our Issuer Support Page for more information.
+              </p>
+              <p class="text-left pt-2 pb-3">
+                <a class="btn btn-primary btn-block py-3 px-5" href="support.html" role="button"><span>Support</span></a>
+              </p>
+              <p class="text-left"><strong>Note:</strong> If there is an error in your data, please contact your location's immunization registry for support.</p>
+              <p><a href="{{ page.registry }}" target="_blank">{{ page.label }} immunization registry</a></p>
+            </div>
+          </div> <!-- / .row -->
+        </div>
+      </div>
+
+    </div> <!-- / .container -->
+  </section>
+  {% endunless %}
+
+  {{ content }}
+
+  {% include footer.html %}
+</body>
+
+</html>
