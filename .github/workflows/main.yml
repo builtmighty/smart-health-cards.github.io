@@ -14,6 +14,8 @@ jobs:
           curl: -O https://raw.githubusercontent.com/the-commons-project/vci-directory/main/vci-issuers.json
       - name: Commit files
         run: |
+         git config --global user.email "kreig.e.durham@gmail.com"
+         git config --global user.name "Kreig Durham"
          git add ./_data
          git commit -m "Fetch JSON file from VCI directory"
    
