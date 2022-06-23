@@ -3,7 +3,7 @@ layout: page
 title: Find My Issuer
 nav: find-my-issuer
 ---
-<section class="subSection py-3">
+<section class="subSection pt-3 pb-5">
   <div class="container">
     <div class="row">
       <div class="col-12 col-lg-12 text-left">
@@ -20,7 +20,10 @@ nav: find-my-issuer
       <div class="col-12">
         <!-- Text -->
         <p class="text-md-start">
-          Select one of the locations where you were vaccinated to see SMART Health Cards issuers in your area.
+          <strong>Select one of the locations where you were vaccinated to see SMART Health Cards issuers in your area.</strong>
+        </p>
+        <p class="text-md-start">
+          Locations with a <span class="shc-issuer mx-1" aria-label="SMART Health Card issuer indicator"></span> icon next to them issue SMART Health Cards through their public health departments. If no <span class="shc-issuer mx-1" aria-label="SMART Health Card issuer indicator"></span> icon appears next to the state/territory/country where you were vaccinated, you still may be able to get a SMART Health Card through a pharmacy or healthcare provider nearby. <strong>Those options will be listed after you select your location below.</strong>
         </p>
       </div>
     </div> <!-- / .row -->
@@ -37,9 +40,11 @@ nav: find-my-issuer
             <div class="row pt-4">
               <div class="grid-cols col-12 locations-us">
                 {% for location in us_locations %}
-                  <p><a href="{{ location.url }}" class="font-weight-bold">
-                    {{ location.label }}
-                  </a></p>
+                <p>
+                  <a href="{{ location.url }}" class="font-weight-bold link-no-underline">
+                    {{ location.label }}{% if location.smart_issuer %}&nbsp;<span class="shc-issuer ml-1" aria-label="SMART Health Card issuer indicator"></span>{% endif %}
+                  </a>
+                </p>
                 {% endfor %}
               </div>
             </div>
@@ -53,16 +58,12 @@ nav: find-my-issuer
             <div class="row pt-4">
               <div class="grid-cols col-12 locations-world">
                 {% for location in world_locations %}
-                  <p><a href="{{ location.url }}" class="font-weight-bold">
-                    {{ location.label }}
-                  </a></p>
+                <p>
+                  <a href="{{ location.url }}" class="font-weight-bold link-no-underline">
+                    {{ location.label }}{% if location.smart_issuer %}&nbsp;<span class="shc-issuer ml-1" aria-label="SMART Health Card issuer indicator"></span>{% endif %}
+                  </a>
+                </p>
                 {% endfor %}
-              </div>
-            </div>
-
-            <div class="row text-left pt-5">
-              <div class="col-12 col-xl-6">
-                <p><a class="font-weight-bold link-no-underline link-arrow" href="issuers.html">For a full list of issuers, click here<span class="right-arrow"></span></a></p>
               </div>
             </div>
           </div>
@@ -82,6 +83,31 @@ nav: find-my-issuer
 
             <!-- Heading -->
             <h2>
+              Want to see all issuers?
+            </h2>
+          </div>
+        </div> <!-- / .row -->
+
+        <div class="row pt-2 pt-lg-3">
+          <div class="col-12 text-left">
+            <!-- Text -->
+            <p class="mb-md-9">
+              See a full list of hundreds of SMART Health Cards issuers worldwide.
+            </p>
+            <p class="text-left pt-2 pb-3">
+              <a class="btn btn-primary btn-block py-3 px-5" href="issuers.html" role="button"><span>All Issuers</span></a>
+            </p>
+          </div>
+        </div> <!-- / .row -->
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-lg-7 offset-lg-1 text-left">
+        <div class="row">
+          <div class="col-12 text-left">
+
+            <!-- Heading -->
+            <h2>
               Need more help?
             </h2>
           </div>
@@ -91,7 +117,7 @@ nav: find-my-issuer
           <div class="col-12 text-left">
             <!-- Text -->
             <p class="mb-md-9">
-              See our Issuer Support Page for more information.
+              See our Issuer Support page for more information.
             </p>
             <p class="text-left pt-2 pb-3">
               <a class="btn btn-primary btn-block py-3 px-5" href="support.html" role="button"><span>Support</span></a>
