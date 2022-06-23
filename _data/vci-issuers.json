@@ -1133,7 +1133,7 @@
       "website": "https://mychart.uconn.edu/MyChart"
     },
     {
-      "iss": "https://epicproxy.hhchealth.org/FHIR/api/epic/2021/Security/Open/EcKeys/32001/SHC",
+      "iss": "https://EpicProxy.hhchealth.org/FHIR/api/epic/2021/Security/Open/EcKeys/32001/SHC",
       "name": "Hartford HealthCare",
       "website": "https://mychartplus.org/myChart"
     },
@@ -1691,7 +1691,7 @@
       "website": "https://mychart.balladhealth.org/mychart"
     },
     {
-      "iss": "https://epicproxy.et0764.epichosted.com/Fhirproxy/api/epic/2021/Security/Open/EcKeys/32001/SHC",
+      "iss": "https://epicproxy.et0764.epichosted.com/FHIRProxy/api/epic/2021/Security/Open/EcKeys/32001/SHC",
       "name": "Confluence Health",
       "website": "https://mychart.confluencehealth.org/MyChart"
     },
@@ -1838,7 +1838,7 @@
       "name": "County of Santa Clara Health System"
     },
     {
-      "iss": "https://edhwebportal.hitchcock.org/FHIRproxy/api/epic/2021/Security/Open/EcKeys/32001/SHC",
+      "iss": "https://edhwebportal.hitchcock.org/FHIRProxy/api/epic/2021/Security/Open/EcKeys/32001/SHC",
       "name": "Dartmouth-Hitchcock Health",
       "website": "https://www.mydh.org/portal/"
     },
@@ -2660,7 +2660,7 @@
       "website": "https://mycare.elcaminohospital.org/mychart"
     },
     {
-      "iss": "https://sf1.rmcps.com/FHIRProxy/api/epic/2021/Security/Open/EcKeys/32001/SHC",
+      "iss": "https://SF1.rmcps.com/FHIRProxy/api/epic/2021/Security/Open/EcKeys/32001/SHC",
       "name": "Riverside Medical Clinic",
       "website": "https://myhealthyconnection.riversidemedicalclinic.com/mychart"
     },
@@ -2842,6 +2842,26 @@
       "iss": "https://mobileproxy.sjhsyr.org/FHIR/api/epic/2021/Security/Open/EcKeys/32001/SHC",
       "name": "St. Joseph’s Hospital Health Center",
       "website": "https://www.sjhsyr.org/"
+    },
+    {
+      "iss": "https://mycynchealth.org",
+      "name": "CyncHealth Nebraska",
+      "website": "https://www.mycynchealth.org/login"
+    },
+    {
+      "iss": "https://docket.care/id",
+      "name": "State of Idaho",
+      "website": "https://healthandwelfare.idaho.gov/covid-19-vaccination"
+    },
+    {
+      "iss": "https://epsoap.conehealth.com/FHIRProxy/api/epic/2021/Security/Open/EcKeys/32001/SHC",
+      "name": "Cone Health",
+      "website": "https://www.conehealth.com/"
+    },
+    {
+      "iss": "https://shc.cdr-healthmed.com/issuer",
+      "name": "CDR Health",
+      "website": "https://www.patientportalfl.com/"
     }
   ]
 }
