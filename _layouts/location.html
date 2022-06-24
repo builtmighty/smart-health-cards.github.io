@@ -60,8 +60,10 @@
       {% comment %} Assign the vaccine portal deeplink from the metadata if it exists, otherwise look in the issuers file {% endcomment %}
       {% assign deeplinks = "" | split: "" %}
       {% assign issuer_name = issuers | where: "name", page.label | last %}
-      {% for issuer in metadata %}
-        {% if issuer.label == page.label %}
+      {% assign issuer_label = metadata | where: "label", page.label | last %}
+      {% assign issuers_gov = metadata | where_exp: "item", "item.issuer_type contains 'governmental'" %}
+      {% for issuer in issuers_gov %}
+        {% if issuer.locations == page.location %}
           {% if issuer.website %}
             {% assign deeplink = issuer.website %}
           {% else %}
@@ -70,6 +72,8 @@
           {% endif %}
         {% elsif issuer_name.name == page.label %}
           {% assign deeplink = issuer_name.website %}
+        {% elsif issuer_label.label == page.label %}
+          {% assign deeplink = issuer_label.website %}
         {% endif %}
       {% endfor %}
 
