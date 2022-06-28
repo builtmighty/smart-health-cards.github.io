@@ -140,7 +140,7 @@
   {% assign pharmacies = metadata | where: "issuer_type", "organizational.pharmacy" | where: "website", string %}
   {% for issuer in pharmacies %}
     {% assign issuer_string = issuer.locations | join %}
-    {% if issuer_string contains country_string or issuer_string contains location_string %}
+    {% if issuer_sting == country_string or issuer_string contains country_string or issuer_string contains location_string %}
       {% assign pharmacy_issuer = issuers | where: "iss", issuer.canonical_iss | last %}
       {% assign pharmacy_issuers = pharmacy_issuers | push: pharmacy_issuer | sort_natural: "name" %}
     {% endif %}
@@ -199,7 +199,7 @@
   {% assign hc_providers = metadata | where: "issuer_type", "organizational.health_system" | where: "locations", location_string | where: "website", string %}
   {% for issuer in hc_providers %}
     {% assign issuer_string = issuer.locations | join %}
-    {% if issuer_string contains country_string or issuer_string contains location_string %}
+    {% if issuer_string == country_string or issuer_string contains country_string or issuer_string contains location_string %}
       {% assign hc_issuer = issuers | where: "iss", issuer.canonical_iss | last %}
       {% assign hc_issuers = hc_issuers | push: hc_issuer | sort_natural: "name" %}
       {% endif %}

@@ -2815,13 +2815,13 @@
     },
     {
       "iss": "https://senegal.tbi.ohms.oracle.com",
-      "name": "République du Sénégal",
-      "website": "https://www.sante.gouv.sn/"
+      "name": "Republic of Senegal",
+      "website": "https://vaccincorona.sec.gouv.sn/webforms/view.php?id=18762"
     },
     {
       "iss": "https://rxhub.luhs.org/fhir/api/epic/2021/Security/Open/EcKeys/32001/SHC",
       "name": "Loyola Medicine",
-      "website": "https://www.loyolamedicine.org/"
+      "website": "https://myloyola.luhs.org/mychart"
     },
     {
       "iss": "https://webproxy.allina.com/FHIR/api/epic/2021/Security/Open/EcKeys/32001/SHC",
@@ -2831,17 +2831,17 @@
     {
       "iss": "https://epicproxy.bhsala.com/FHIRProxy/api/epic/2021/Security/Open/EcKeys/32001/SHC",
       "name": "Brookwood Baptist Health",
-      "website": "https://www.brookwoodbaptisthealth.com/"
+      "website": "https://www.brookwoodbaptisthealth.com/portal"
     },
     {
       "iss": "https://cnesp001.carene.org/FHIR/api/epic/2021/Security/Open/EcKeys/32001/SHC",
       "name": "Care New England",
-      "website": "https://www.carenewengland.org/"
+      "website": "https://www.carenewengland.org/personal-health-record"
     },
     {
       "iss": "https://mobileproxy.sjhsyr.org/FHIR/api/epic/2021/Security/Open/EcKeys/32001/SHC",
-      "name": "St. Joseph’s Hospital Health Center",
-      "website": "https://www.sjhsyr.org/"
+      "name": "St. Joseph's Hospital Health Center",
+      "website": "https://www.sjhsyr.org/my-st-josephs/"
     },
     {
       "iss": "https://mycynchealth.org",
@@ -2849,19 +2849,19 @@
       "website": "https://www.mycynchealth.org/login"
     },
     {
-      "iss": "https://docket.care/id",
-      "name": "State of Idaho",
-      "website": "https://healthandwelfare.idaho.gov/covid-19-vaccination"
-    },
-    {
       "iss": "https://epsoap.conehealth.com/FHIRProxy/api/epic/2021/Security/Open/EcKeys/32001/SHC",
       "name": "Cone Health",
-      "website": "https://www.conehealth.com/"
+      "website": "https://mychart.conehealth.com/MyChart"
     },
     {
       "iss": "https://shc.cdr-healthmed.com/issuer",
       "name": "CDR Health",
       "website": "https://www.patientportalfl.com/"
+    },
+    {
+      "iss": "https://epicproxy.et0939.epichosted.com/FHIRProxy/api/epic/2021/Security/Open/EcKeys/32001/SHC",
+      "name": "Spartanburg Regional Healthcare System",
+      "website": "https://mychart.spartanburgregional.com/MyChart"
     }
   ]
 }
