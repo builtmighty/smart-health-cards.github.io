@@ -15,16 +15,17 @@ jobs:
         with:
           # curl arguments
           curl: -o _data/vci-issuers-metadata.json https://raw.githubusercontent.com/the-commons-project/vci-directory/main/vci-issuers-metadata.json
-      - name: Commit files
-        run: |
-         git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-         git config --local user.name "github-actions[bot]"
-         git add ./_data/*
-         git commit -m "Fetch JSON file from VCI directory"
+#      - name: Commit files
+#        run: |
+#         git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+#         git config --local user.name "github-actions[bot]"
+#         git add ./_data/*
+#         git commit -m "Fetch JSON file from VCI directory"
       - name: Create pull request
         id: json
         uses: peter-evans/create-pull-request@v4
         with:
+         add-paths: ./_data/*
          author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
          body: |
           Fetch JSON file(s) from the VCI directory 
