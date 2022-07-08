@@ -1,7 +1,7 @@
 name: Fetch json files
 on: [push]
 jobs:
- cURL:
+ fetchIssuerJSON:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -15,12 +15,12 @@ jobs:
         with:
           # curl arguments
           curl: -o _data/vci-issuers-metadata.json https://raw.githubusercontent.com/the-commons-project/vci-directory/main/vci-issuers-metadata.json
-#      - name: Commit files
-#        run: |
-#         git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-#         git config --local user.name "github-actions[bot]"
-#         git add ./_data/*
-#         git commit -m "Fetch JSON file from VCI directory"
+      - name: Commit files
+        run: |
+         git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+         git config --local user.name "github-actions[bot]"
+         git add ./_data/*
+         git commit -m "Fetch JSON file from VCI directory"
       - name: Create pull request
         id: json
         uses: peter-evans/create-pull-request@v4
