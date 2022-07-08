@@ -32,4 +32,4 @@ jobs:
          commit-message: 'Fetch JSON from VCI directory'
          delete-branch: true
          labels: automated pr
-         title: 'JSON Update'
+         title: 'Automated JSON Fetch'
