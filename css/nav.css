@@ -111,7 +111,7 @@ nav .btn-secondary  , nav .btn-primary:active , nav .btn-primary:visited
 
 .navbar-dark .navbar-toggler-icon 
 {
-    background-image: url("../Assets/Images/hamburger.svg");
+    background-image: url("/Assets/Images/hamburger.svg");
 }
 
 .navbar .navbar-nav .nav-link 

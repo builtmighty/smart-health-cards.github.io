@@ -2862,6 +2862,11 @@
       "iss": "https://epicproxy.et0939.epichosted.com/FHIRProxy/api/epic/2021/Security/Open/EcKeys/32001/SHC",
       "name": "Spartanburg Regional Healthcare System",
       "website": "https://mychart.spartanburgregional.com/MyChart"
+    },
+    {
+      "iss": "https://epicproxy.et1030.epichosted.com/FHIRProxy/api/epic/2021/Security/Open/EcKeys/32001/SHC",
+      "name": "St. Charles Health System",
+      "website": "https://www.stcharleshealthcare.org/mychart-patient-portal"
     }
   ]
 }

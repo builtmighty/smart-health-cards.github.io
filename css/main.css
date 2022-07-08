@@ -426,7 +426,7 @@ ul#FAQTOC {
 
 @media (min-width: 992px) {
     .bg-logo {
-        background-image: url(../Assets/Images/bgLogo.png);
+        background-image: url(/Assets/Images/bgLogo.png);
         background-size: 45%;
         background-repeat: no-repeat;
         background-position: right;
@@ -445,7 +445,7 @@ ul#FAQTOC {
     display: inline-block;
     width: 16px;
     height: 13px;
-    background: url('../Assets/Images/smart-health-card-icon.svg') center / contain no-repeat;
+    background: url('/Assets/Images/smart-health-card-icon.svg') center / contain no-repeat;
     vertical-align: middle;
 }
 

@@ -87,7 +87,8 @@ const remaps = [
   {"page": "changelog", "id": "005"}, 
   {"page": "changelog", "id": "004"}, 
   {"page": "changelog", "id": "003"}, 
-  {"page": "changelog", "id": "002"}
+  {"page": "changelog", "id": "002"},
+  {"page": "ial", "id": "", "target": `${targetOrigin}/ial`},
 ];
 
 const path = window.location.pathname.replace(/\//g, "");
@@ -100,4 +101,6 @@ if (needRedirect.length > 0) {
   } else {
     window.location.href = `${targetOrigin}${window.location.pathname}${window.location.hash}`;
   }
+} else if(window.location.pathname == "/" || window.location.pathname == "/index.html") {
+  window.location.href = `${window.location.origin}/en/${hash}`;
 }
