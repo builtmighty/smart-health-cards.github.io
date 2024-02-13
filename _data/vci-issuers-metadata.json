@@ -2325,19 +2325,10 @@
         },
         {
             "canonical_iss":"https://fhirprd.edward.org/fhirprd/api/epic/2021/Security/Open/EcKeys/32001/SHC",
-            "name":"DuPage Medical Group and Edward-Elmhurst Health",
-            "website":"https://mychart.dupagemedicalgroup.com/mychart",
+            "name":"Edward-Elmhurst Health",
             "locations":[
                 {
                     "state":"IL",
-                    "country":"US"
-                },
-                {
-                    "state":"IN",
-                    "country":"US"
-                },
-                {
-                    "state":"WI",
                     "country":"US"
                 }
             ]
@@ -2665,7 +2656,7 @@
             "website":"https://www.mycityofhope.org/Mychart"
         },
         {
-            "canonical_iss":"https://epicprisfd01.wpahs.org/PRD-FHIR/api/epic/2021/Security/Open/EcKeys/32001/SHC",
+            "canonical_iss":"https://epicprisfd.ahn.org/PRD-FHIR/api/epic/2021/Security/Open/EcKeys/32001/SHC",
             "issuer_type":"organizational.health_system",
             "locations":[
                 {
@@ -2720,7 +2711,7 @@
             "website":"https://mychart.southshorehealth.org/MyChart"
         },
         {
-            "canonical_iss":"https://epicsoap.carle.com/FHIR/api/epic/2021/Security/Open/EcKeys/32001/SHC",
+            "canonical_iss":"https://epicproxy.et0316.epichosted.com/FHIRProxy/api/epic/2021/Security/Open/EcKeys/32001/SHC",
             "issuer_type":"organizational.health_system",
             "locations":[
                 {
@@ -3071,7 +3062,7 @@
             "website":"https://premisehealth.com/"
         },
         {
-            "canonical_iss":"https://mepic.hackensackumc.net/fhir/api/epic/2021/Security/Open/EcKeys/32001/SHC",
+            "canonical_iss":"https://mepic.hmhn.org/fhir/api/epic/2021/Security/Open/EcKeys/32001/SHC",
             "issuer_type":"organizational.health_system",
             "website":"https://www.hackensackmeridianhealth.org/",
             "locations":[
@@ -3251,7 +3242,7 @@
             ]
         },
         {
-            "canonical_iss":"https://api.utmsa.com/fhir/api/epic/2021/Security/Open/EcKeys/32001/SHC",
+            "canonical_iss":"https://epicproxy.et0582.epichosted.com/FHIRProxy/api/epic/2021/Security/Open/EcKeys/32001/SHC",
             "issuer_type":"organizational.health_system",
             "website":"https://www.uthscsa.edu/",
             "locations":[
@@ -4742,17 +4733,6 @@
             ]
         },
         {
-            "canonical_iss":"https://rproxy.novohtg.com/OAUTHPRD/api/epic/2021/Security/Open/EcKeys/32001/SHC",
-            "issuer_type":"organizational.health_system",
-            "website": "https://novohealth.com/patient-app/",
-            "locations":[
-                {
-                    "state":"WI",
-                    "country":"US"
-                }
-            ]
-        },
-        {
             "canonical_iss":"https://sfd.fairview.org/FHIR/api/epic/2021/Security/Open/EcKeys/32001/SHC",
             "issuer_type":"organizational.health_system",
             "website":"https://www.fairview.org/",
@@ -4914,9 +4894,8 @@
         },
         {
             "canonical_iss":"https://travel.hawaii.gov",
-            "website":"https://hawaiicovid19.com/smart-health-card/",
+            "website":"https://healthpass.doh.hawaii.gov/",
             "issuer_type":"governmental.state_province_territory",
-            "currently_issuing":false,
             "label":"Hawaii",
             "locations":[
                 {
@@ -5438,7 +5417,7 @@
             ]
         },
         {
-            "canonical_iss":"https://epicweb.challiance.org/Interconnect-FHIR/api/epic/2021/Security/Open/EcKeys/32001/SHC",
+            "canonical_iss":"https://epicmobile.challiance.org/Interconnect-OAuth2/api/epic/2021/Security/Open/EcKeys/32001/SHC",
             "issuer_type":"organizational.health_system",
             "website":"https://mychart.challiance.org/mychart",
             "locations":[
@@ -7886,6 +7865,198 @@
             "issuer_type":"organizational.laboratory",
             "locations":[
                 {
+                    "country":"US"
+                }
+            ]
+        },
+        {
+            "canonical_iss":"https://api.valleyhealth.org/fhirproxy/api/epic/2021/Security/Open/EcKeys/32001/SHC",
+            "website":"https://mychart.valleyhealth.org/PRD/Authentication/Login?",
+            "issuer_type":"organizational.health_system",
+            "locations":[
+                {
+                    "state":"WV",
+                    "country":"US"
+                }
+            ]
+         },
+         {
+            "canonical_iss":"https://epicproxy.et1243.epichosted.com/OAuth2-PRD/api/epic/2021/Security/Open/EcKeys/32001/SHC",
+            "website":"https://www.wth.org/",
+            "issuer_type":"organizational.health_system",
+            "locations":[
+                {
+                    "state":"TN",
+                    "country":"US"
+                }
+            ]
+        },
+         {
+            "canonical_iss":"https://fhir.dchstx.org/FHIR-External/api/epic/2021/Security/Open/EcKeys/32001/SHC",
+            "website":"https://mychart.dchstx.org/MyChart/Authentication/Login?",
+            "issuer_type":"organizational.health_system",
+            "locations":[
+                {
+                    "state":"TX",
+                    "country":"US"
+                }
+            ]
+        },
+        {
+            "canonical_iss":"https://smarthealthcard.phsa.ca/v1/issuer",
+            "issuer_type":"governmental.state_province_territory",
+            "label":"Government of British Columbia",
+            "locations":[
+                {
+                    "state":"BC",
+                    "country":"CA"
+                }
+            ]
+        },
+        {
+            "canonical_iss":"https://epicproxy.et1267.epichosted.com/FHIRProxy/api/epic/2021/Security/Open/EcKeys/32001/SHC",
+            "website":"https://www.mcleodhealth.org/",
+            "issuer_type":"organizational.health_system",
+            "locations":[
+                {
+                    "state":"SC",
+                    "country":"US"
+                }
+            ]
+         },
+        {
+            "canonical_iss":" https://w1soap.wakehealth.edu/fhirproxy/api/epic/2021/Security/Open/EcKeys/32001/SHC",
+            "website":"https://www.mywakehealth.org/mychart/Authentication/Login?",
+            "issuer_type":"organizational.health_system",
+            "locations":[
+                {
+                    "state":"AL",
+                    "country":"US"
+                },
+                {
+                    "state":"GA",
+                    "country":"US"
+                },
+                {
+                    "state":"NC",
+                    "country":"US"
+                },
+                {
+                    "state":"SC",
+                    "country":"US"
+                }
+            ]
+         },
+        {
+            "canonical_iss":"https://epicproxy.et1157.epichosted.com/FHIRProxy/api/epic/2021/Security/Open/EcKeys/32001/SHC",
+            "website":"https://mychart.rwjbh.org/MyChart/Authentication/Login?",
+            "issuer_type":"organizational.health_system",
+            "locations":[
+                {
+                    "state":"NJ",
+                    "country":"US"
+                }
+            ]
+        },
+        {
+            "canonical_iss":"https://arrprd.mhhcc.org/OAuth2/api/epic/2021/Security/Open/EcKeys/32001/SHC",
+            "website":"https://mychart.mhhcc.org/MyChartPRD/Authentication/Login?",
+            "issuer_type":"organizational.health_system",
+            "locations":[
+                {
+                    "state":"IN",
+                    "country":"US"
+                }
+            ]
+        },
+        {
+            "canonical_iss":"https://www.mypruitthealth.com/api/api/Vaccination/shc",
+            "website":"https://www.pruitthealth.com/",
+            "issuer_type":"organizational.health_system",
+            "locations":[
+                {
+                    "state":"FL",
+                    "country":"US"
+                },
+                {
+                    "state":"GA",
+                    "country":"US"
+                },
+                {
+                    "state":"NC",
+                    "country":"US"
+                },
+                {
+                    "state":"SC",
+                    "country":"US"
+                }
+            ]
+        },
+        {
+            "canonical_iss":"https://epicarrprod.uhnj.org/FHIR-Proxy/api/epic/2021/Security/Open/EcKeys/32001/SHC",
+            "website":"https://mychart.uhnj.org/MyChart-PRD/Authentication/Login?",
+            "issuer_type":"organizational.health_system",
+            "locations":[
+                {
+                    "state":"NJ",
+                    "country":"US"
+                }
+            ]
+        },
+        {
+            "canonical_iss":"https://icon.utoledo.edu/ic-oa2-prd/api/epic/2021/Security/Open/EcKeys/32001/SHC",
+            "website":"https://mychart.utoledo.edu/mychart/Authentication/Login?",
+            "issuer_type":"organizational.health_system",
+            "locations":[
+                {
+                    "state":"OH",
+                    "country":"US"
+                }
+            ]
+        },
+        {
+            "canonical_iss":"https://immunize.nyc/shc/mvr",
+            "website":"https://myvaccinerecord.cityofnewyork.us/prod/myrecord-react/",
+            "issuer_type":"governmental.state_province_territory",
+            "currently_issuing":false,
+            "label":"New York",
+            "locations":[
+                {
+                    "state":"NY",
+                    "country":"US"
+                }
+            ]  
+        },
+        {
+            "canonical_iss":"https://epicproxy.et1075.epichosted.com/FHIRProxy/api/epic/2021/Security/Open/EcKeys/32001/SHC",
+            "website":"https://www.my-ahs.org/MyChart/Authentication/Login?",
+            "issuer_type":"organizational.health_system",
+            "locations":[
+                {
+                    "state":"CA",
+                    "country":"US"
+                }
+            ]        
+        },
+        {
+            "canonical_iss":"https://rp-prd.copcp.com/fhirProxy/api/epic/2021/Security/Open/EcKeys/32001/SHC",
+            "website":"https://mychart.copcp.com/mychart/Authentication/Login?",
+            "issuer_type":"organizational.health_system",
+            "locations":[
+                {
+                    "state":"OH",
+                    "country":"US"
+                }
+            ]
+        },
+        {
+            "canonical_iss":"https://healthpass.doh.hawaii.gov/issuer",
+            "website":"https://healthpass.doh.hawaii.gov/",
+            "label":"Hawaii Department of Health",
+            "issuer_type":"governmental.state_province_territory",
+            "locations":[
+                {
+                    "state":"HI",
                     "country":"US"
                 }
             ]
