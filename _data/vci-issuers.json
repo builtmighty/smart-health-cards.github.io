@@ -955,8 +955,7 @@
     },
     {
       "iss": "https://fhirprd.edward.org/fhirprd/api/epic/2021/Security/Open/EcKeys/32001/SHC",
-      "name": "DuPage Medical Group and Edward-Elmhurst Health",
-      "website": "https://mychart.dupagemedicalgroup.com/mychart"
+      "name": "Edward-Elmhurst Health"
     },
     {
       "iss": "https://apps.vdh.virginia.gov/credentials",
@@ -1090,6 +1089,12 @@
     {
       "iss": "https://epicprisfd01.wpahs.org/PRD-FHIR/api/epic/2021/Security/Open/EcKeys/32001/SHC",
       "name": "Allegheny Health Network",
+      "website": "https://mychart.ahn.org/MyChart",
+      "canonical_iss": "https://epicprisfd.ahn.org/PRD-FHIR/api/epic/2021/Security/Open/EcKeys/32001/SHC"
+    },
+    {
+      "iss": "https://epicprisfd.ahn.org/PRD-FHIR/api/epic/2021/Security/Open/EcKeys/32001/SHC",
+      "name": "Allegheny Health Network",
       "website": "https://mychart.ahn.org/MyChart"
     },
     {
@@ -1114,6 +1119,12 @@
     },
     {
       "iss": "https://epicsoap.carle.com/FHIR/api/epic/2021/Security/Open/EcKeys/32001/SHC",
+      "name": "Carle Foundation Hospital",
+      "website": "https://www.mycarle.com/MyChart",
+      "canonical_iss": "https://epicproxy.et0316.epichosted.com/FHIRProxy/api/epic/2021/Security/Open/EcKeys/32001/SHC"
+    },
+    {
+      "iss": "https://epicproxy.et0316.epichosted.com/FHIRProxy/api/epic/2021/Security/Open/EcKeys/32001/SHC",
       "name": "Carle Foundation Hospital",
       "website": "https://www.mycarle.com/MyChart"
     },
@@ -1237,7 +1248,13 @@
       "website": "https://www.mypremisehealth.com/MyChart"
     },
     {
+      "iss": "https://mepic.hmhn.org/fhir/api/epic/2021/Security/Open/EcKeys/32001/SHC",
+      "name": "Hackensack Meridian Health",
+      "website": "https://mychart.hmhn.org/mychart/"
+    },
+    {
       "iss": "https://mepic.hackensackumc.net/fhir/api/epic/2021/Security/Open/EcKeys/32001/SHC",
+      "canonical_iss": "https://mepic.hmhn.org/fhir/api/epic/2021/Security/Open/EcKeys/32001/SHC",
       "name": "Hackensack Meridian Health",
       "website": "https://mychart.hmhn.org/mychart/"
     },
@@ -1313,6 +1330,12 @@
     },
     {
       "iss": "https://api.utmsa.com/fhir/api/epic/2021/Security/Open/EcKeys/32001/SHC",
+      "name": "UT Health San Antonio",
+      "website": "https://mychart.utmedicinesa.com/mychart/",
+      "canonical_iss": "https://epicproxy.et0582.epichosted.com/FHIRProxy/api/epic/2021/Security/Open/EcKeys/32001/SHC"
+    },
+    {
+      "iss": "https://epicproxy.et0582.epichosted.com/FHIRProxy/api/epic/2021/Security/Open/EcKeys/32001/SHC",
       "name": "UT Health San Antonio",
       "website": "https://mychart.utmedicinesa.com/mychart/"
     },
@@ -1907,11 +1930,6 @@
       "website": "https://www.riversidehealthcare.org/"
     },
     {
-      "iss": "https://rproxy.novohtg.com/OAUTHPRD/api/epic/2021/Security/Open/EcKeys/32001/SHC",
-      "name": "NOVO Health Technology Group",
-      "website": "https://novohealth.com/patient-app/"
-    },
-    {
       "iss": "https://sfd.fairview.org/FHIR/api/epic/2021/Security/Open/EcKeys/32001/SHC",
       "name": "Fairview Health Services",
       "website": "https://www.fairview.org/"
@@ -2208,9 +2226,15 @@
       "website": "https://mychart.crh.org/mychart/"
     },
     {
-      "iss": "https://epicweb.challiance.org/Interconnect-FHIR/api/epic/2021/Security/Open/EcKeys/32001/SHC",
+      "iss": "https://epicmobile.challiance.org/Interconnect-OAuth2/api/epic/2021/Security/Open/EcKeys/32001/SHC",
       "name": "Cambridge Health Alliance",
       "website": "https://mychart.challiance.org/mychart"
+    },
+    {
+      "iss": "https://epicweb.challiance.org/Interconnect-FHIR/api/epic/2021/Security/Open/EcKeys/32001/SHC",
+      "name": "Cambridge Health Alliance",
+      "website": "https://mychart.challiance.org/mychart",
+      "canonical_iss": "https://epicmobile.challiance.org/Interconnect-OAuth2/api/epic/2021/Security/Open/EcKeys/32001/SHC"
     },
     {
       "iss": "https://wpprod.nghs.com/fhir/api/epic/2021/Security/Open/EcKeys/32001/SHC",
@@ -3042,6 +3066,79 @@
       "iss": "https://emed.com",
       "name": "eMed",
       "website": "https://www.emed.com/support"
+    },
+    {
+      "iss": "https://api.valleyhealth.org/fhirproxy/api/epic/2021/Security/Open/EcKeys/32001/SHC",
+      "name": "Valley Health Systems, Inc FQHC",
+      "website": "https://mychart.valleyhealth.org/PRD/Authentication/Login?"
+    },
+    {
+      "iss": "https://epicproxy.et1243.epichosted.com/OAuth2-PRD/api/epic/2021/Security/Open/EcKeys/32001/SHC",
+      "name": "West Tennessee Healthcare",
+      "website": "https://www.wth.org/"
+    },
+    {
+      "iss": "https://fhir.dchstx.org/FHIR-External/api/epic/2021/Security/Open/EcKeys/32001/SHC",
+      "name": "Driscoll Children’s Hospital",
+      "website": "https://mychart.dchstx.org/MyChart/Authentication/Login?"
+    },
+    {
+      "iss": "https://smarthealthcard.phsa.ca/v1/issuer",
+      "name": "Government of British Columbia"
+    },
+    {
+      "iss": "https://epicproxy.et1267.epichosted.com/FHIRProxy/api/epic/2021/Security/Open/EcKeys/32001/SHC",
+      "name": "McLeod Health",
+      "website": "https://www.mcleodhealth.org/"
+    },
+    {
+      "iss": "https://w1soap.wakehealth.edu/fhirproxy/api/epic/2021/Security/Open/EcKeys/32001/SHC",
+      "name": "Atrium Health Wake Forest Baptist",
+      "website": "https://www.mywakehealth.org/mychart/Authentication/Login?"
+    },
+    {
+      "iss": "https://epicproxy.et1157.epichosted.com/FHIRProxy/api/epic/2021/Security/Open/EcKeys/32001/SHC",
+      "name": "RWJBarnabas Health",
+      "website": "https://mychart.rwjbh.org/MyChart/Authentication/Login?"
+    },
+    {
+      "iss": "https://arrprd.mhhcc.org/OAuth2/api/epic/2021/Security/Open/EcKeys/32001/SHC",
+      "name": "Memorial Hospital and Health Care Center",
+      "website": "https://mychart.mhhcc.org/MyChartPRD/Authentication/Login?"
+    },
+    {
+      "iss": "https://www.mypruitthealth.com/api/api/Vaccination/shc",
+      "name": "PruittHealth",
+      "website": "https://www.pruitthealth.com/"
+    },
+    {
+      "iss": "https://epicarrprod.uhnj.org/FHIR-Proxy/api/epic/2021/Security/Open/EcKeys/32001/SHC",
+      "name": "University Hospital",
+      "website": "https://mychart.uhnj.org/MyChart-PRD/Authentication/Login?"
+    },
+    {
+      "iss": "https://icon.utoledo.edu/ic-oa2-prd/api/epic/2021/Security/Open/EcKeys/32001/SHC",
+      "name": "University of Toledo",
+      "website": "https://mychart.utoledo.edu/mychart/Authentication/Login?"
+    },
+    {
+      "iss": "https://immunize.nyc/shc/mvr",
+      "name": "New York City - Citywide Immunization Registry (CIR)",
+      "website": "https://myvaccinerecord.cityofnewyork.us/prod/myrecord-react/"
+    },
+    {
+      "iss": "https://epicproxy.et1075.epichosted.com/FHIRProxy/api/epic/2021/Security/Open/EcKeys/32001/SHC",
+      "name": "Alameda Health System",
+      "website": "https://www.my-ahs.org/MyChart/Authentication/Login?"
+    },
+    {
+      "iss": "https://rp-prd.copcp.com/fhirProxy/api/epic/2021/Security/Open/EcKeys/32001/SHC",
+      "name": "Central Ohio Primary Care Physicians",
+      "website": "https://mychart.copcp.com/mychart/Authentication/Login?"
+    },
+    {
+      "iss": "https://healthpass.doh.hawaii.gov/issuer",
+      "name": "Hawaii Department of Health"
     }
   ]
 }
