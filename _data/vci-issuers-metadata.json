@@ -3783,7 +3783,7 @@
             "canonical_iss":"https://smarthealthcard.iisregistry.net/kentucky/issuer",
             "issuer_type":"governmental.state_province_territory",
             "label":"Kentucky",
-            "website":"https://kyir.chfs.ky.gov/webiznet_kyir/Login.aspx",
+            "website":"https://www.chfs.ky.gov/agencies/dph/dehp/idb/Pages/kyirportal.aspx",
             "locations":[
                 {
                     "state":"KY",
@@ -4004,7 +4004,7 @@
             ]
         },
         {
-            "canonical_iss":"https://webproxy.mynovant.org/fhir-prd/api/epic/2021/Security/Open/EcKeys/32001/SHC",
+            "canonical_iss":"https://epicproxy.et0798.epichosted.com/APIProxyPRD/api/epic/2021/Security/Open/EcKeys/32001/SHC",
             "issuer_type":"organizational.health_system",
             "website":"https://www.novantmychart.org/mychart",
             "locations":[
@@ -4382,7 +4382,7 @@
             ]
         },
         {
-            "canonical_iss":"https://meritus-rev-prd.meritushealth.com/FHIRPRD/api/epic/2021/Security/Open/EcKeys/32001/SHC",
+            "canonical_iss":"https://epicproxy.et1062.epichosted.com/FHIRProxyPRD/api/epic/2021/Security/Open/EcKeys/32001/SHC",
             "issuer_type":"organizational.health_system",
             "website":"https://mychart.meritushealth.com/meritus",
             "locations":[
@@ -5820,17 +5820,6 @@
             "locations":[
                 {
                     "state":"MS",
-                    "country":"US"
-                }
-            ]
-        },
-        {
-            "canonical_iss":"https://prodrx919.martinhealth.org/FHIR-PRD/api/epic/2021/Security/Open/EcKeys/32001/SHC",
-            "issuer_type":"organizational.health_system",
-            "website": "https://mychart.clevelandclinic.org",
-            "locations":[
-                {
-                    "state":"FL",
                     "country":"US"
                 }
             ]
@@ -8016,9 +8005,9 @@
         },
         {
             "canonical_iss":"https://immunize.nyc/shc/mvr",
-            "website":"https://myvaccinerecord.cityofnewyork.us/prod/myrecord-react/",
+            "website":"https://myvaccinerecord.cityofnewyork.us/myrecord/",
             "issuer_type":"governmental.state_province_territory",
-            "currently_issuing":false,
+            "currently_issuing":true,
             "label":"New York",
             "locations":[
                 {
