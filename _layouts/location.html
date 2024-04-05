@@ -56,7 +56,7 @@
 
       {% comment %} If the location is a SMART Health Card issuer, return their deeplink. Otherwise, return the text referring them to the pharmacies and healthcare providers {% endcomment %}
       {% assign location_meta = metadata | where_exp: "item", "item.issuer_type contains 'governmental'" | where: 'locations', page.location[0] | last %}
-      {% if page.location[0].country != "US" or location_meta.currently_issuing == nil and location_meta.locations[0] contains '"US"' %}
+      {% if page.location[0].country != "US" or location_meta.currently_issuing == true and location_meta.locations[0] contains '"US"' or location_meta.currently_issuing == nil and location_meta.locations[0] contains '"US"' %}
 
       {% comment %} Assign the vaccine portal deeplink from the vci-issuers-metadata if it exists, otherwise look in the vci-issuers.json file {% endcomment %}
       {% assign issuer = issuers | where: "iss", location_meta.canonical_iss | last %}
