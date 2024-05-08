@@ -4,4 +4,4 @@ _site
 .jekyll-metadata
 vendor
 *.lock
-.github/workflows
+.github/workflows/issuer-pull.yml
