@@ -12,7 +12,7 @@
 		4000,
 		35729
 	],
-	"postCreateCommand": "gem install jekyll bundler && bundle install --verbose && bundle exec jekyll serve --port 443",
+	"postCreateCommand": "sudo chmod +x .devcontainer/scripts/setup.sh && .devcontainer/scripts/setup.sh",
 	"postStartCommand": "/bin/bash .devcontainer/setup/build.sh",
 	"waitFor": "postStartCommand",
 	"customizations": {
