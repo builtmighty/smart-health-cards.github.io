@@ -7,9 +7,7 @@
 		"ghcr.io/devcontainers/features/github-cli:1": {}
 	},
 	"forwardPorts": [
-	 	443,
-	 	4000,
-	 	35729
+	 	4000
 	],
 	"postCreateCommand": "sudo chmod +x .devcontainer/scripts/setup.sh && .devcontainer/scripts/setup.sh",
 	"postStartCommand": "/bin/bash .devcontainer/setup/build.sh",
