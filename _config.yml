@@ -46,7 +46,12 @@ collections:
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 #
-# exclude:
+exclude:
+  - .devcontainer/
+  - .github/
+  - .vscode/
+  - jekyll_output.log
+
 #   - .sass-cache/
 #   - .jekyll-cache/
 #   - gemfiles/

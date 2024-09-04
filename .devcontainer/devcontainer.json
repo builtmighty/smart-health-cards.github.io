@@ -1,0 +1,65 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/jekyll
+{
+	"name": "Built Mighty Development ENV",
+	"image": "mcr.microsoft.com/devcontainers/jekyll",
+	"features": {
+		"ghcr.io/devcontainers/features/github-cli:1": {}
+	},
+	"forwardPorts": [
+	 	4000
+	],
+	"postCreateCommand": "sudo chmod +x .devcontainer/scripts/setup.sh && .devcontainer/scripts/setup.sh",
+	"postStartCommand": "/bin/bash .devcontainer/setup/build.sh",
+	"waitFor": "postStartCommand",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"eamodio.gitlens",
+				"donjayamanne.githistory",
+				"johnbillion.vscode-wordpress-hooks",
+				"ms-vscode-remote.remote-containers",
+				"seatonjiang.gitmoji-vscode",
+				"GitHub.vscode-pull-request-github",
+				"GitHub.copilot",
+				"GitHub.copilot-chat",
+				"BuiltMighty.builtmighty-commit",
+				"ms-vsliveshare.vsliveshare"
+			],
+			"settings": {
+				"terminal.integrated.defaultProfile.linux": "zsh",
+				"terminal.integrated.shell.linux": "/bin/zsh",
+				"terminal.integrated.profiles.linux": {
+					"zsh": {
+						"path": "/bin/zsh"
+					}
+				},
+				"files.eol": "\n",
+				"editor.bracketPairColorization.enabled": true,
+				"editor.guides.bracketPairs": "active",
+				"editor.errorLens.enabled": true,
+				"editor.folding": true,
+				"editor.foldingStrategy": "auto",
+				"editor.quickSuggestions": {
+					"other": true,
+					"comments": true,
+					"strings": true
+				},
+				"workbench.editorAssociations": {
+					"*.md": "vscode.markdown.preview.editor"
+				}
+			}
+		}
+		// "codespaces": {
+		// 	"repositories": {
+		// 		"builtmighty/.devcontainer": {
+		// 			"permissions": {
+		// 				"contents": "write"
+		// 			}
+		// 		}
+		// 	}
+		// }
+	}
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+}
