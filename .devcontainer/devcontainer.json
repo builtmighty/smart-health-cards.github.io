@@ -11,7 +11,7 @@
 	],
 	"postCreateCommand": "sudo chmod +x .devcontainer/scripts/setup.sh && .devcontainer/scripts/setup.sh",
 	"postStartCommand": "/bin/bash .devcontainer/setup/build.sh",
-	// "waitFor": "postStartCommand",
+	"waitFor": "postStartCommand",
 	"customizations": {
 		"vscode": {
 			"extensions": [
