@@ -11,28 +11,28 @@ echo  "8. Exit script with Success Code - 0"
 echo  "\n===============================================================================\n"
 
 # Globally set the SITE_HOST variable 🌐
-if [ -z ${CODESPACE_NAME+x} ]; then
-	export SITE_DOMAIN="localhost"
-	export SITE_HOST="localhost"
-else
-	export SITE_DOMAIN="${CODESPACE_NAME}-443.${GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN}"
-	export SITE_HOST="https://${CODESPACE_NAME}-443.${GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN}"
-fi
+# if [ -z ${CODESPACE_NAME+x} ]; then
+# 	export SITE_DOMAIN="localhost"
+# 	export SITE_HOST="localhost"
+# else
+# 	export SITE_DOMAIN="${CODESPACE_NAME}-443.${GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN}"
+# 	export SITE_HOST="https://${CODESPACE_NAME}-443.${GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN}"
+# fi
 
-# Update the CODESPACES-WELCOME-MESSAGE.md file with the Codespace URL but first Ignore those changes in Git 📩
-git update-index --assume-unchanged .devcontainer/CODESPACES-WELCOME-MESSAGE.md
-sed -i "s|{insert-codespace-url-here}|$SITE_HOST|" .devcontainer/CODESPACES-WELCOME-MESSAGE.md && \
+# # Update the CODESPACES-WELCOME-MESSAGE.md file with the Codespace URL but first Ignore those changes in Git 📩
+# git update-index --assume-unchanged .devcontainer/CODESPACES-WELCOME-MESSAGE.md
+# sed -i "s|{insert-codespace-url-here}|$SITE_HOST|" .devcontainer/CODESPACES-WELCOME-MESSAGE.md && \
 
 # Install the bundler from ruby gems
-echo "🔧 Installing the bundler from ruby gems"
-gem install bundler
+# echo "🔧 Installing the bundler from ruby gems"
+# gem install bundler
 
-# Install required bundles from the Gemfile
-echo "🔧 Installing required bundles from the Gemfile"
-bundle install --verbose
+# # Install required bundles from the Gemfile
+# echo "🔧 Installing required bundles from the Gemfile"
+# bundle install --verbose
 
-# Check for updates before building
-bundle update
+# # Check for updates before building
+# bundle update
 
 # Serve the Jekyll site
 echo "🚀 Serving the Jekyll site"
