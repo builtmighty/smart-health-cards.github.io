@@ -27,9 +27,6 @@ sed -i "s|{insert-codespace-url-here}|$SITE_HOST|" .devcontainer/CODESPACES-WELC
 echo "🔧 Installing the bundler from ruby gems"
 gem install bundler
 
-# Cleanup outdated gems
-gem clean
-
 # Install required bundles from the Gemfile
 echo "🔧 Installing required bundles from the Gemfile"
 bundle install --verbose
