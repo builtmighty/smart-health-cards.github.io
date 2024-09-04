@@ -5,7 +5,7 @@
 ```sh
 gem install bundler
 bundle install
-jekyll --serve
+bundle exec jekyll serve
 ```
 
 ## Deploying
